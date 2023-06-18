@@ -1,0 +1,8 @@
+﻿The Problem "Concurrency"
+When you build a multithreaded application, your program needs to ensure that shared data 
+should be protected from the possibility of multiple thread engagement with its value. 
+
+What's going to happen if multiple threads were accessing the data at the same point? 
+The CLR can suspend any thread for a while who's going to update the value or is in the 
+middle of updating the value and at same time a thread comes to read that value which is not completely updated, 
+that thread is reading an uncompleted/unstable data.
